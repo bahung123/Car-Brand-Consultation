@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from numba.cuda import profiling
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import StandardScaler
@@ -8,7 +9,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
 import time
-
 def plot_results(y_test, y_pred, y_train, feature_importance_data):
     plt.figure(figsize=(15, 10))
     
